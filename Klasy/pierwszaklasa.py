@@ -22,6 +22,13 @@ class Paletka:
         print(f"Utworzylismy obiekt o kolorze {self.kolor_obiektu} - ID: {id(self)}")
     #pass #instrukcja nullowa (od null) - cos jak komentarz, ale interpreter tego nie ignoruje
 
+    def info(self):
+        print(f"Kolor obiektu to: {self.kolor_obiektu}")
+
+    #info extended
+    def info_ex(self, nazwa):
+        print(f"Kolor obiektu to {nazwa} to {self.kolor_obiektu}")
+
 #tworzymy obiekt na podstawie klasy, podajemy nazwe obiektu (paletka_a) i wywolujemy konstruktor klasy (Paletka())
 
 def testklasy():
@@ -36,6 +43,10 @@ def testklasy():
     print("*******************************")
     print(f"Kolor dla paletka_a: {paletka_a.kolor_obiektu}")
     print(f"Kolor dla paletka_b: {paletka_b.kolor_obiektu}")
+    paletka_a.info()
+    paletka_b.info()
+    paletka_a.info_ex("paletka_a")
+    paletka_b.info_ex("paletka_b")
 
 #f-string
 #val = 'Python course'
